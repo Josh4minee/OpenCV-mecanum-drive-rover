@@ -1,6 +1,6 @@
-# 11/06/2026: The beginning. Circuit layout and finding out specifications.
+## 11/06/2026: The beginning. Circuit layout and finding out specifications.
 
-## New semester, new project.
+# New semester, new project.
 
 This project is for my computer vision class.
 
@@ -15,7 +15,7 @@ The reason why I am using a mecanum drive rather than normal RWD, using TOF sens
 - Mine: 1:48 TT motors, all from one batch. I might need to change these out for 1:120 gear ratio but only testing will confirm
 - Driver boards: 2× HW-354 mini dual H-bridge (2–10 V supply, 1.8–7 V logic, 1.5 A continuous). IN1–IN4, no pull-ups needed.
 
-## Power system
+# Power system
 - Battery: 7.4 V 6000 mAh LiPo (2S, 8.4 V full).
 - 10A fuse
 - Motors are ≤6 V, PWM duty will be set at 6 / Vbat (71% at 8.4 V) to get an average voltage the motors can handle.
@@ -24,14 +24,14 @@ The reason why I am using a mecanum drive rather than normal RWD, using TOF sens
 - Caps: 100 nF across each motor (x4), 100 nF at each driver (x2), 100 nF at 74AHCT125 pins 14–7, 470 µF 16 V on motor supply, 4700 µF 10 V after UBEC to Pi5.
 - Grounds: logic ground pour (PCA9685, ToF, INA219, shifter), separate wide motor return, one junction at the battery.
 
-## Sensors and PCA9685
+# Sensors and PCA9685
 - 4× TOF200C (VL53L0X, 3–5 V boards) + 2 spares, powered from Pi 3.3 V.
 - Boot sequence: all XSHUT low, each is woken up one at a time and addresses are set 0x30–0x33.
 - XSHUT → Pi GPIO5/6/13/19 (header pins 29/31/33/35). Add 10 kΩ pull-ups to 3.3 V only if the TOF sensors don't have any.
   (they should, but I was never able to find datasheets for them so I will be sure when I see it myself).
 - PCA9685 at 0x40: VCC 3.3 V, SDA, SCL, GND. OE low, V+ unused. Channels 0–7 → driver IN1–IN4 ×2. Outputs are push-pull and start low. Max PWM 1526 Hz.
 
-## INA219 (battery voltage)
+# INA219 (battery voltage)
 - Address 0x41 (bridge A0).
 - VCC → 3.3 V, GND → common ground, SDA/SCL shared.
 - **VIN+ and VIN− both go to battery positive.** Bus voltage is read at VIN−.
@@ -39,24 +39,24 @@ The reason why I am using a mecanum drive rather than normal RWD, using TOF sens
 - Library: `adafruit-circuitpython-ina219`.
 - I am NOT routing motor current through it, too close to the breakout's limit and I only need voltage readings in the end.
 
-## LED strip (WS2812B)
+# LED strip (WS2812B)
 - 5 V from UBEC. Data: Pi GPIO10 (pin 19) → 74AHCT125 pin 2.
 - 74AHCT125: pin 14 = 5 V, pins 7 and 1 = GND, pin 3 → 330 Ω → DIN.
 - Unused gates: pins 5, 9, 12 → GND. Pins 4, 10, 13 → 5 V.
 - 10 kΩ from pin 2 to GND. To stop flickering when the Pi5 boots.
 - Strip current: ~60 mA/LED max, trace width will be calculated when I decide on how long of a strip I want to use.
 
-## PCB plan
+# PCB plan
 - HAT-style on the Pi 5, still need to check dimensions and see if it is possible.
 - Notch for the camera ribbon, and stack mounting if possible.
 - every breakout board will be removable and just slot onto the PCB.
 
-## To do tomorrow
+# To do tomorrow
 - Finish the entirety of the CAD model of the car.
 - Order parts after checking if they work with the CAD model of the car.
 - If CAD is finished fast (likely not), making the PCB on KiCad is also on the list of things to do.
 
-## Pictures of the day (final circuit layout, CAD and PCB schematic early stages)
+# Pictures of the day (final circuit layout, CAD and PCB schematic early stages)
 <img src="/screenshots/circuit_image.png" height="500" />
 <img src="/screenshots/journal/primitive_start_on_CAD.png" height="500" />
 <img src="/screenshots/journal/primitive_start_on_schematic.png" height="500" />
