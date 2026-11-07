@@ -1,4 +1,4 @@
-# 11/06/2026: The beginning. Circuit layout and finding out specifications.
+# 11/06/2026: The beginning. Circuit layout and figuring out specifications.
 **Total time spent: 3.5 hours**\
 *Timelaps: [laps](https://lapse.hackclub.com/timelapse/GnB8wL3rzQjc)*\
 New semester, new project.
