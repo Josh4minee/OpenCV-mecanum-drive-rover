@@ -14,7 +14,7 @@ The reason why I am using a mecanum drive rather than normal RWD, using TOF sens
 
 **Motor setup**
 - Mine: 1:48 TT motors, all from one batch. I might need to change these out for 1:120 gear ratio but only testing will confirm
-- Driver boards: 2× HW-354 mini dual H-bridge (2–10 V supply, 1.8–7 V logic, 1.5 A continuous). IN1–IN4, no pull-ups needed.
+- Driver boards: 2× HW-354 mini dual H-bridge.
 
 **Power system**
 - Battery: 7.4 V 6000 mAh LiPo (2S, 8.4 V full).
