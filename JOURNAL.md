@@ -55,3 +55,8 @@ The reason why I am using a mecanum drive rather than normal RWD, using TOF sens
 - Finish the entirety of the CAD model of the car.
 - Order parts after checking if they work with the CAD model of the car.
 - If CAD is finished fast (likely not), making the PCB on KiCad is also on the list of things to do.
+
+## Pictures of the day (final circuit layout, CAD and PCB schematic early stages)
+<img src="/screenshots/circuit_image.png" height="500" />
+<img src="/screenshots/journal/primitive_start_on_CAD.png" height="500" />
+<img src="/screenshots/journal/primitive_start_on_schematic.png" height="500" />
