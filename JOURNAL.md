@@ -1,7 +1,7 @@
 # 11/06/2026: The beginning. Circuit layout and finding out specifications.
 **Total time spent: 3.5 hours**\
 *Timelaps: [laps](https://lapse.hackclub.com/timelapse/GnB8wL3rzQjc)*\
-New semester, new project.\
+New semester, new project.
 
 This project is for my computer vision class.
 
