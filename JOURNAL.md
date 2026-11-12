@@ -1,6 +1,6 @@
 # 11/12/2026: Start on PCB and parts ordered.
-**Total time spent:  hours**\
-*Timelaps: [laps](https://lapse.hackclub.com/timelapse/GnB8wL3rzQjc)*\
+**Total time spent:  7.13 hours**\
+*Timelaps: [laps](https://lapse.hackclub.com/timelapse/b5X-v76ovdwz)*\
 
 Today I worked really hard to get the schematic of the PCB done and ready for review (asking people to review it, I like doing it since it helps to have second opinions).
 Update on the parts: they were all ordered Sunday but that was all I did that day so I did not write a journal entry just for that.
@@ -12,18 +12,33 @@ A total of 12 components were created for the Shematic
 - BAT-input, which is simply two THT pads that I will solder my deans T connector on.
 - fuse 10A, which is the fuse footprint I needed to make for my 10A fuse.
 - L298N, which is simply the motor drivers that I use, again I needed to make it's symbol and footprint.
-- pca9685, since I am mounting it on my board, all the available symbols and footprints were for the chip and not the         actual breakout board so I needed to make it myself.
-- Pi_header, which is used to just plug all the GPIO pins that I will be using, which is a total of 9 according to the       wiring diagram I made earlier.
+- pca9685, since I am mounting it on my board, all the available symbols and footprints were for the chip and not the actual breakout board so I needed to make it myself.
+- Pi_header, which is used to just plug all the GPIO pins that I will be using, which is a total of 9 according to the wiring diagram I made earlier.
 - Pi_USBC, again just a 2 pad symbole and footprint so I can solder on a pigtail USBC connector to supply the Pi 5.
 - PWRswitch, again two holes since I will be mounting the switch on my chasis and the leads will be connected with wires.
 - SN7AHCT125N, the chip was not in KiCad so might as well make it and put it in my library.
-- TOF_(VL53L0X), just a normal pin footprint and pin labelling for the TOF sensors that are also going to be used on the      chasis and connected with wires.
+- TOF_(VL53L0X), just a normal pin footprint and pin labelling for the TOF sensors that are also going to be used on the chasis and connected with wires.
 - UBEC_5V_7A, 4 holes for all 4 wires the UBEC needs to all be wired up, same concept as the other 2 hole mounting strategy.
 - Vsensor, this is the symbol and footprint for the voltage sensor.
-- WS2812B, just a basic 6 prong LED for my library, I find it easier to use my own parts and footprints rather than the       ones that were already available.
+- WS2812B, just a basic 6 prong LED for my library, I find it easier to use my own parts and footprints rather than the ones that were already available.
 
 Anyways, after all the Libraries were done I started placing all the components that leaded to me finishing the PCB schematic in a single session, while writing this report I did remember I should add the 3D models for everything so that is what I did after this sentence.
 
+I did make sure to take note of every model I used:
+- https://grabcad.com/library/motor-driver-mini-l298n-1-5a-celebrating-10-000-downloads-1
+- https://github.com/adafruit/Adafruit_CAD_Parts/tree/main/815%20Servo%20Driver%2016%20Channel
+- https://grabcad.com/library/vl53l0x-4
+- https://grabcad.com/library/ina219-2
+- https://grabcad.com/library/blade-fuse-holder-1/details?folder_id=14244903
+- https://grabcad.com/library/auto-fuse-1
+- https://grabcad.com/library/2-54mm-male-pin-header-1/details?folder_id=14212673
+
+Very productive day in the end, I will have to route the PCB eventually and same goes for making the CAD of the chasis.
+The chasis takes priority since I want to have it done before or at the same time that my parts arrive.
+
+**Pictures of the day (final schematic and screenshot of all my library symbols/footprints with the showcase of a model)**
+<img src="/screenshots/PCB_schematic.png" height="500" />
+<img src="/screenshots/journal/Library_list_andSTEP.png" height="500" />
 
 
 # 11/06/2026: The beginning. Circuit layout and figuring out specifications.
