@@ -1,6 +1,6 @@
 # 11/12/2026: Start on PCB and parts ordered.
 **Total time spent:  7.13 hours**\
-*Timelaps: [laps](https://lapse.hackclub.com/timelapse/b5X-v76ovdwz)*\
+*Timelaps: [laps](https://lapse.hackclub.com/timelapse/b5X-v76ovdwz)*
 
 Today I worked really hard to get the schematic of the PCB done and ready for review (asking people to review it, I like doing it since it helps to have second opinions).
 Update on the parts: they were all ordered Sunday but that was all I did that day so I did not write a journal entry just for that.
